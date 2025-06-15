@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias Express</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Desafio: Criar uma calculadora de conta de restaurante
+    Requisitos:
+    1. Receber o número de pessoas na mesa.
+    2. Receber o valor total da conta.
+    3. Permitir a escolha do método de pagamento (PIX, dinheiro ou cartão).
+    4. Aplicar um desconto de 10% se o pagamento for via PIX ou dinheiro.
+    5. Calcular o valor que cada pessoa deve pagar e exiba o resultado.
+    -->
+
+<body>
+    <!-- Modal de entrada -->
+    <div class="modal">
+        <div class="modal-content">
+            <img src="assets/logo.png" alt="logo-delicias-express" class="logo">
+            <form class="formulario">
+                <div class="group-form">
+                    <label class="label" for="valorConta"> Valor total da conta: </label>
+                    <input class="input" id="valorConta" placeholder="100,00 R$" required>
+                </div>
+
+                <div class="group-form">
+                    <label class="label" for="metodoPagamento"> Método de pagamento: </label>
+                    <select class="selecao" id="metodoPagamento" required>
+                        <option value="pix"> PIX </option>
+                        <option value="dinheiro"> Dinheiro </option>
+                        <option value="cartao"> Cartão </option>
+                    </select>
+                </div>
+
+                <div class="group-form">
+                    <label class="label" for="numPessoas"> Número de Pessoas: </label>
+                    <select class="selecao" id="numPessoas" required>
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                    </select>
+                </div>
+                <button type="submit" class="btn"> CALCULAR </button>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Resultado -->
+    <div id="modalResultado" class="modal-resultado" style="display: none;">
+        <div class="modal-content">
+            <h2>Valor da conta:</h2>
+            <p id="mensagemErro" ></p>
+            <p id="resultadoTotal" ></p>
+            <p id="resultadoPorPessoa" ></p>
+            <button id="fecharModal" >Concluir</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
